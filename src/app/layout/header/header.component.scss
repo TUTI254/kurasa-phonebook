@@ -1,0 +1,19 @@
+.combine{
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+
+}
+.title{
+ color:  #d45b5b !important;
+ cursor: pointer;
+}
+.title:hover{
+ color:  #f7c152 !important;
+ cursor: pointer;
+
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
