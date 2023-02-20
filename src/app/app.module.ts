@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './layout/header/header.component';
 import { DialogBtnComponent } from './component/dialog-btn/dialog-btn.component';
 import { DialogBodyComponent } from './component/dialog-body/dialog-body.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { DialogBodyComponent } from './component/dialog-body/dialog-body.compone
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

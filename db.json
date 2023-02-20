@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstName": "Clive",
+      "lastName": "Vagas",
+      "email": "vagas123@gmail.com",
+      "phone": 712345678,
+      "address": "links road, Nyali, Mombasa",
+      "dob": "2003-09-30T21:00:00.000Z",
+      "id": 1
+    },
+    {
+      "firstName": "collins",
+      "lastName": "Tuti",
+      "email": "collotuti6@gmail.com",
+      "phone": 741990665,
+      "address": "ronald ngala street, RNG plaza",
+      "dob": "2001-10-07T21:00:00.000Z",
+      "id": 2
+    }
+  ]
+}

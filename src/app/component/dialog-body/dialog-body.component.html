@@ -8,37 +8,37 @@
     </header>
     <p>
       <mat-form-field>
-        <input matInput placeholder="First Name" formControlName="firstName">
+        <input matInput placeholder="First Name" formControlName="firstName" required="true">
         <mat-icon matSuffix>person</mat-icon>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <input matInput placeholder="Last Name" formControlName="lastName" >
+        <input matInput placeholder="Last Name" formControlName="lastName"  required="true">
         <mat-icon matSuffix>person</mat-icon>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <input matInput type="email" placeholder="Email"formControlName="email">
+        <input matInput type="email" placeholder="Email"formControlName="email" required="true">
         <mat-icon matSuffix>mail</mat-icon>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <input matInput type="number" placeholder="Phone"formControlName="phone">
+        <input matInput type="number" placeholder="Phone"formControlName="phone" required="true">
         <mat-icon matSuffix>phone</mat-icon>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <input matInput placeholder="Address"formControlName="address">
+        <input matInput placeholder="Address"formControlName="address" required="true">
         <mat-icon matSuffix>map</mat-icon>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="DOB"formControlName="dob">
+        <input matInput [matDatepicker]="picker" placeholder="DOB"formControlName="dob" required="true">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
