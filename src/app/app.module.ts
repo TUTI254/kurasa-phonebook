@@ -18,6 +18,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { DialogBtnComponent } from './component/dialog-btn/dialog-btn.component';
 import { DialogBodyComponent } from './component/dialog-body/dialog-body.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './component/user-list/user-list.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     DialogBtnComponent,
     DialogBodyComponent,
+    UserListComponent,
 
   ],
   imports: [
