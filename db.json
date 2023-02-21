@@ -10,13 +10,31 @@
       "id": 1
     },
     {
-      "firstName": "collins",
+      "firstName": "Collins",
       "lastName": "Tuti",
       "email": "collotuti6@gmail.com",
       "phone": 741990665,
       "address": "ronald ngala street, RNG plaza",
       "dob": "2001-10-07T21:00:00.000Z",
       "id": 2
+    },
+    {
+      "firstName": "Marylyne",
+      "lastName": "Lulu",
+      "email": "Lulu255@yahoo.com",
+      "phone": 787654321,
+      "address": "Moshi, Tanzania",
+      "dob": "2006-10-05T21:00:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "Rose",
+      "lastName": "Amon",
+      "email": "roseamon@live.com",
+      "phone": 734200049,
+      "address": "Sameer Park, Mombasa rd",
+      "dob": "1997-01-05T21:00:00.000Z",
+      "id": 4
     }
   ]
 }
