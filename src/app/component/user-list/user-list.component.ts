@@ -3,6 +3,8 @@ import { UsersService } from 'src/app/services/users.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-list',
@@ -15,10 +17,23 @@ export class UserListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private _userService: UsersService) { }
+  constructor(
+    private _userService: UsersService,
+    private _dialog:MatDialog
+    ) { }
 
   ngOnInit(): void {
     this.getUserList();
+  }
+  openDialog(){
+    const dialogRef = this._dialog.open(DialogBodyComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+          this.getUserList();
+        }
+      },
+    });
   }
 
   getUserList(){
@@ -40,5 +55,31 @@ export class UserListComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteUser(id: number){
+    this._userService.deleteUser(id).subscribe({
+      next: (res) => {
+        alert('User deleted successfully');
+        this.getUserList();
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+
+  openEditDialog(data: any){
+    const dialogRef = this._dialog.open(DialogBodyComponent,{
+      data,
+    });
+
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+          this.getUserList();
+        }
+      },
+    });
   }
 }

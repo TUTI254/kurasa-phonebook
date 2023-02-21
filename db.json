@@ -1,24 +1,6 @@
 {
   "users": [
     {
-      "firstName": "Clive",
-      "lastName": "Vagas",
-      "email": "vagas123@gmail.com",
-      "phone": 712345678,
-      "address": "links road, Nyali, Mombasa",
-      "dob": "2003-09-30T21:00:00.000Z",
-      "id": 1
-    },
-    {
-      "firstName": "Collins",
-      "lastName": "Tuti",
-      "email": "collotuti6@gmail.com",
-      "phone": 741990665,
-      "address": "ronald ngala street, RNG plaza",
-      "dob": "2001-10-07T21:00:00.000Z",
-      "id": 2
-    },
-    {
       "firstName": "Marylyne",
       "lastName": "Lulu",
       "email": "Lulu255@yahoo.com",
@@ -35,6 +17,15 @@
       "address": "Sameer Park, Mombasa rd",
       "dob": "1997-01-05T21:00:00.000Z",
       "id": 4
+    },
+    {
+      "firstName": "clive",
+      "lastName": "kongoi",
+      "email": "kongoi2002@live.com",
+      "phone": 713358070,
+      "address": "limuru rd, Tigoni",
+      "dob": "2023-02-15T21:00:00.000Z",
+      "id": 5
     }
   ]
 }
