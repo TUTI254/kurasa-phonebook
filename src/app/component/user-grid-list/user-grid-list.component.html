@@ -13,6 +13,10 @@
           <p>Address: <span>{{ user.address }}</span></p>
           <p>DOB: <span>{{ user.dob | date }}</span></p>
           <div>
+            <p>Action: </p>
+            <button mat-icon-button (click)="UserDetails(user.id)">
+              <mat-icon>description</mat-icon>
+            </button>
             <button mat-icon-button (click)="openEditDialog(user)">
               <mat-icon>edit</mat-icon>
             </button>
