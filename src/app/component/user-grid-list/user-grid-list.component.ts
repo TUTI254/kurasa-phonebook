@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 import { MatDialog } from '@angular/material/dialog';
+import { UserDetailComponent } from '../user-detail/user-detail.component';
 
 @Component({
   selector: 'app-user-grid-list',
@@ -9,9 +10,11 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./user-grid-list.component.scss']
 })
 export class UserGridListComponent {
-   users!: any [] ;
+  users!: any [] ;
+  seletedUser: any;
 
-  constructor( private _userService: UsersService, private _dialog:MatDialog,) { }
+
+  constructor( private _userService: UsersService, private _dialog:MatDialog, private _matdialog: MatDialog,) { }
  ngOnInit() {
    this.getUserList();
   }
@@ -60,6 +63,20 @@ export class UserGridListComponent {
         }
       },
     });
+  }
+  UserDetails(userId: number): void {
+    this._userService.getUserById(userId).subscribe({
+      next: (res) => {
+        this.seletedUser = res;
+        this._matdialog.open(UserDetailComponent, {
+          data: this.seletedUser,
+        });
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+
   }
 }
 
