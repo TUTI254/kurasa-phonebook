@@ -1,3 +1,10 @@
 <app-header></app-header>
-<app-user-list></app-user-list>
-<app-user-grid-list></app-user-grid-list>
+<button mat-raised-button color="warn" class="toggle" (click)="showComponentA = !showComponentA">Toggle View</button>
+
+<ng-container *ngIf="showComponentA">
+  <app-user-list></app-user-list>
+</ng-container>
+
+<ng-container *ngIf="!showComponentA">
+  <app-user-grid-list></app-user-grid-list>
+</ng-container>
