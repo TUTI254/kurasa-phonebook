@@ -5,6 +5,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 import { MatDialog } from '@angular/material/dialog';
+import { UserDetailComponent } from '../user-detail/user-detail.component';
 
 @Component({
   selector: 'app-user-list',
@@ -14,12 +15,14 @@ import { MatDialog } from '@angular/material/dialog';
 export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'phone', 'address', 'dob', 'action'];
   dataSource!: MatTableDataSource<any>;
+  seletedUser: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
     private _userService: UsersService,
-    private _dialog:MatDialog
+    private _dialog:MatDialog,
+    private _matdialog: MatDialog,
     ) { }
 
   ngOnInit(): void {
@@ -81,5 +84,19 @@ export class UserListComponent implements OnInit {
         }
       },
     });
+  }
+  UserDetails(userId: number): void {
+    this._userService.getUserById(userId).subscribe({
+      next: (res) => {
+        this.seletedUser = res;
+        this._matdialog.open(UserDetailComponent, {
+          data: this.seletedUser,
+        });
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+
   }
 }

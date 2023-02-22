@@ -26,6 +26,24 @@
       "address": "limuru rd, Tigoni",
       "dob": "2023-02-15T21:00:00.000Z",
       "id": 5
+    },
+    {
+      "firstName": "godfrey",
+      "lastName": "amon",
+      "email": "gamon@gmail.com",
+      "phone": 734126578,
+      "address": "Salama court, Donholm",
+      "dob": "1987-07-12T21:00:00.000Z",
+      "id": 6
+    },
+    {
+      "firstName": "David",
+      "lastName": "Amwayi",
+      "email": "tutidavid47@live.com",
+      "phone": 708455563,
+      "address": "Tigoni, Limuru ,kiambu",
+      "dob": "1987-02-12T21:00:00.000Z",
+      "id": 7
     }
   ]
 }
