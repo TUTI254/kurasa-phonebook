@@ -2,9 +2,13 @@
   padding-top: 20px;
   margin: 0 auto;
   max-width: 1248px;
-  mat-form-field{
-    width: 100%;
-  }
+}
+p{
+  font-weight: bold;
+  margin-right: 10px;
+}
+span{
+  font-weight: normal;
 }
 
 .grid-title{
@@ -12,6 +16,10 @@
   color:  #f7c152 !important;
 }
 .grid-title:hover{
+ color:  #d45b5b!important;
+
+}
+mat-card-title{
  color:  #d45b5b!important;
 
 }

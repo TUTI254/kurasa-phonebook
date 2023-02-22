@@ -1,0 +1,27 @@
+<button mat-raised-button (click)="openDialog()" class="add-btn" >Add New User</button>
+<h1 class="grid-title">Grid View</h1>
+<div class="main-body">
+  <mat-grid-list cols="3" >
+    <mat-grid-tile *ngFor="let user of users">
+      <mat-card>
+        <mat-card-title>Phone Book <mat-icon>person</mat-icon></mat-card-title>
+        <mat-card-content>
+          <p>First Name: <span>{{ user.firstName }}</span></p>
+          <p>Last Name: <span>{{ user.lastName }}</span> </p>
+          <p>Email:<span> {{ user.email }}</span></p>
+          <p>Phone: <span>0{{ user.phone }}</span></p>
+          <p>Address: <span>{{ user.address }}</span></p>
+          <p>DOB: <span>{{ user.dob | date }}</span></p>
+          <div>
+            <button mat-icon-button (click)="openEditDialog(user)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteUser(user.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

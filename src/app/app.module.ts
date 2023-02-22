@@ -15,6 +15,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './layout/header/header.component';
@@ -22,6 +24,8 @@ import { DialogBtnComponent } from './component/dialog-btn/dialog-btn.component'
 import { DialogBodyComponent } from './component/dialog-body/dialog-body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserListComponent } from './component/user-list/user-list.component';
+import { UserDetailComponent } from './component/user-detail/user-detail.component';
+import { UserGridListComponent } from './component/user-grid-list/user-grid-list.component';
 
 
 @NgModule({
@@ -31,6 +35,8 @@ import { UserListComponent } from './component/user-list/user-list.component';
     DialogBtnComponent,
     DialogBodyComponent,
     UserListComponent,
+    UserDetailComponent,
+    UserGridListComponent,
 
   ],
   imports: [
@@ -48,6 +54,8 @@ import { UserListComponent } from './component/user-list/user-list.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatGridListModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
